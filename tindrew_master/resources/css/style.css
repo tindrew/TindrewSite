@@ -1,0 +1,100 @@
+* { /* always do this with every website. Gets rid of all margins and paddings and sets the box sizing*/
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  color: #555;
+  /*font-family: 'Lato', 'Ariel';*/
+    /*font-family: 'Titillium Web', 'Ariel';*/
+  font-family: 'Noto Sans', sans-serif;
+
+  font-weight: 300; 
+  font-size: 20px;
+  text-rendering: optimizeLegibility; /*this optimizes the text rendering. */
+}
+
+
+/***************************/
+/*Header*/
+/***************************/
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/foam-saucer.jpg); 
+  background-size: cover; /*fixes photo being zoomed in */
+  background-position: center;
+  height: 100vh;
+  
+}
+
+.hero-text-box {
+  position: absolute; /*the only way to virtically and horizontally center it */
+  text-align: center;
+  width: 600px;
+  top: 50%;
+  left:50%;
+  transform: translate( -50%, -50%); /*used to position it from the middle instead of the corner */
+  
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  float: center;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.main-nav li {
+  display: inline-block; /* puts the list items side by side */
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+  transition: border-bottom 0.2s;
+}
+
+/***************************/
+/*Reuseable Components*/
+/***************************/
+
+h1 {
+  margin:0; /*gets rid of margin caused by normalize.css */
+  color: #fff;
+  font-size: 240%;
+  font-weight: 300;
+  /*text-transform: uppercase;*/
+  word-spacing: 4px;
+  
+}
+
+h2 {
+margin:0; /*gets rid of margin caused by normalize.css */
+  color: #fff;
+  font-size: 180%;
+  font-weight: 300;
+  /*text-transform: uppercase;*/
+  word-spacing: 4px;
+}
+
+.row { /* all content will be in rows. This centers rows and sets them up so all rows will have these properties */
+  max-width: 1140px;
+  margin: 0 auto; /* centers the content within the row */
+}
